@@ -28,7 +28,7 @@ sed -i 's/-lboost_system-mt /-lboost_system-mt-s /' configure
 CC="${CC}" CXX="${CXX}" make V=1
 
 cd src
-cp -f zcashd.exe votecoind.exe
-cp -f zcash-cli.exe votecoin-cli.exe
-cp -f zcash-tx.exe votecoin-tx.exe
+cp -f zcashd.exe bitcoinzd.exe
+cp -f zcash-cli.exe bitcoinz-cli.exe
+cp -f zcash-tx.exe bitcoinz-tx.exe
 cd ..

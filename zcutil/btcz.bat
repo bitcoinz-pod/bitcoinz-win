@@ -1,38 +1,38 @@
 @echo off
 
 if "%1" == "addr" (
-   votecoin-cli getnewaddress
+   bitcoinz-cli getnewaddress
    goto exit
 )
 
 
 if "%1" == "zaddr" (
-   votecoin-cli z_getnewaddress
+   bitcoinz-cli z_getnewaddress
    goto exit
 )
 
 
 if "%1" == "send" (
-   votecoin-cli z_sendmany %2 "[{\"address\": \"%3\", \"amount\": %4}]" 1 0
+   bitcoinz-cli z_sendmany %2 "[{\"address\": \"%3\", \"amount\": %4}]" 1 0
    goto exit
 )
 
 
 
 if "%1" == "sendto" (
-   votecoin-cli sendtoaddress %2 %3
+   bitcoinz-cli sendtoaddress %2 %3
    goto exit
 )
 
 
 if "%1" == "status" (
-   votecoin-cli z_getoperationresult
+   bitcoinz-cli z_getoperationresult
    goto exit
 )
 
 
 if "%1" == "totals" (
-   votecoin-cli z_gettotalbalance
+   bitcoinz-cli z_gettotalbalance
    goto exit
 )
 
@@ -43,7 +43,7 @@ if "%1" == "totals" (
    echo.
    echo ------------------------------------------------------------------------
    echo   This is helper script to make VoteCoin operations easier.
-   echo   Make sure votecoind.exe is running so we can communicate with it.
+   echo   Make sure bitcoinzd.exe is running so we can communicate with it.
    echo   Supported commands:
    echo.
    echo    vot addr ... generate new T address
